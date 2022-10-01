@@ -1,0 +1,13 @@
+name: Docker build CI
+
+on: [ "push" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: docker build Mysql
+        run: |
+            docker build -t hrmuwanika/mysql:5.7 
